@@ -1,13 +1,10 @@
 <template>
-  <button @click="inc">Increment</button>
+  <button @click="increment(8)">increment</button>
 </template>
 
-<script>
-export default {
-  setup() {
-    function inc() {}
+<script setup>
+import { mapActions } from '@/store';
 
-    return { inc };
-  },
-};
+const { increment } = mapActions();
+
 </script>
